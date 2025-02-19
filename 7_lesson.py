@@ -2,9 +2,6 @@ import ptbot
 from dotenv import load_dotenv
 import os
 from pytimeparse import parse
-
-
-# Загрузка переменных окружения
 load_dotenv()
 
 
