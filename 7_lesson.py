@@ -2,8 +2,8 @@ import ptbot
 from dotenv import load_dotenv
 import os
 from pytimeparse import parse
-load_dotenv()
 
+load_dotenv()
 
 TG_TOKEN = os.getenv('TG_TOKEN')
 TG_CHAT_ID = os.getenv('TG_CHAT_ID')
