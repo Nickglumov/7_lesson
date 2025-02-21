@@ -3,11 +3,6 @@ from dotenv import load_dotenv
 import os
 from pytimeparse import parse
 
-load_dotenv()
-
-TG_TOKEN = os.getenv('TG_TOKEN')
-TG_CHAT_ID = os.getenv('TG_CHAT_ID')
-
 
 def notify(chat_id):
     bot.send_message(chat_id, "Время вышло")
@@ -35,8 +30,11 @@ def notify_progress(secs_left, chat_id, message_id, total_time):
 
 
 def main():
+    load_dotenv()
+    tg_token = os.getenv('TG_TOKEN')
+    tg_chat_id = os.getenv('TG_CHAT_ID')
     global bot
-    bot = ptbot.Bot(TG_TOKEN)
+    bot = ptbot.Bot(tg_token)
     bot.reply_on_message(wait)
     bot.run_bot()
 
